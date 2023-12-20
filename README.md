@@ -1,6 +1,6 @@
 # Pomodoro
 
-Version 0.0.1
+Version 0.0.2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
@@ -60,6 +60,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ##   Version history
 v0.0.1 Initial Version
+v0.0.2 Fixing Timer
 
 ##   Todo
 - Add more functionality to the tasks such as task completion, task removal, etc

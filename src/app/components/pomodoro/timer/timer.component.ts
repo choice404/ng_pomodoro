@@ -84,6 +84,7 @@ export class TimerComponent {
       alert("Timer is currently running!");
       return;
     }
+
     if(this.timer === "pomodoro")
     {
       this.minutes = 25;
@@ -161,8 +162,7 @@ export class TimerComponent {
           this.pomodoroCount = 0;
         }
       }
-
-      this.interval = setInterval(timer, 1000);
     }
+    this.interval = setInterval(timer, 1000);
   }
 }
