@@ -4,6 +4,11 @@ Version 0.0.2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
+<!-- [Live Demo](https://pomodoro-xi-five.vercel.app/) -->
+<a href="https://pomodoro-xi-five.vercel.app/" target="_blank">Live Demo</a>
+
+![Pomodoro Demo](./readme_assets/pomodoro.gif)
+
 ## Table of Content
 * [About](#about)
 * [How to use](#how-to-use)
