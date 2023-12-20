@@ -1,0 +1,33 @@
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+
+/* Pomodoro colors */
+$pomodoro: rgba(244, 67, 54, 1);
+$short-break: rgba(76, 175, 80, 1);
+$long-break: rgba(33, 150, 243, 1);
+
+$theme: dark;
+$primary: $pomodoro;
+$secondary: $white;
+$tertiary: $black;
+
+@function teal($alpha)
+{
+    @return rgba(31, 122, 140, $alpha);
+}
+
+@if $theme == dark
+{
+    $primary: $pomodoro;
+    $secondary: $white; // lighten($cyan, 0%);
+    $tertiary: $black; //darken($cyan, 30%);
+}
+@else if $theme == light
+{
+    $primary: white;
+    $secondary: black;
+    $tertiary: picton-blue;
+}
+
+/* Portfolio card variables */
+$card-width: 15rem;

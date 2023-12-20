@@ -1,0 +1,79 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_fonts.scss';
+
+.timer-wrapper
+{
+  padding-top: 10rem;
+
+  .button-wrapper
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button
+    {
+      margin: 0 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover
+      {
+        transform: scale(1.1);
+      }
+
+      &:active
+      {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  .pomodoro-wrapper
+  {
+    width: 100vw;
+
+    .timer
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35rem;
+      height: 15rem;
+      border-radius: 10px;
+      font-size: 5rem;
+      // color: darken($secondary, 75%);
+      color: $secondary;
+
+      @media (max-width: 600px)
+      {
+        width: 20rem;
+        height: 10rem;
+      }
+    }
+
+    .pomodoro
+    {
+      margin:auto;
+      background-color: $primary;
+    }
+
+    .short-break
+    {
+      margin:auto;
+      background-color: $short-break;
+    }
+
+    .long-break
+    {
+      margin:auto;
+      background-color: $long-break;
+    }
+
+  }
+}

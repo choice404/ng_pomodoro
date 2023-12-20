@@ -1,0 +1,29 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_fonts.scss';
+
+.modal-wrapper
+{
+  position: fixed;
+  z-index: 100;
+}
+
+.task-list
+{
+  margin: 2rem 0;
+}
+
+.task-wrapper
+{
+  width: 100vw;
+  margin: 7rem 0;
+
+  .task-title
+  {
+    color: $tertiary;
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
+    width: auto;
+  }
+}

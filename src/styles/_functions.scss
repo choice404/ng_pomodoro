@@ -1,0 +1,5 @@
+@function toRadians($degrees)
+{
+    $value: $degrees * (3.14159265359 / 180);
+    @return  $value;
+}

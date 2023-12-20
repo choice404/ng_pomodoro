@@ -1,0 +1,23 @@
+@mixin font($font)
+{
+    font-family: $font;
+}
+
+@mixin flex-align-justify($align, $justify)
+{
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin flex-column($bg)
+{
+    display: flex;
+    flex-direction: column;
+    background: $bg;
+}
+
+@mixin text-float($dir)
+{
+    text-align: $dir;
+}

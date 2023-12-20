@@ -1,0 +1,45 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_fonts.scss';
+
+.new-task-wrapper
+{
+  width: 100vw;
+
+  .new-task
+  {
+    background-color: $secondary;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 6rem;
+    border-radius: 10px;
+    font-size: 3rem;
+    color: $tertiary;
+    transition: all 0.2s ease-in-out;
+
+    @media (max-width: 600px)
+    {
+      width: 20rem;
+      height: 6rem;
+    }
+
+    .icon
+    {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  .new-task:hover
+  {
+    background-color: $primary;
+    cursor: pointer;
+
+    .icon
+    {
+      // transform: scale(1.1);
+      color: $secondary;
+    }
+  }
+}

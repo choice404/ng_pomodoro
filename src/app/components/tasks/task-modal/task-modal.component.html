@@ -1,0 +1,27 @@
+<div
+  class="modal-backdrop"
+  (click)="onClickExitModal($event)"
+>
+  <div
+    class="modal"
+  >
+    <form>
+      <label>Task Name</label>
+      <input
+        type="text"
+        [(ngModel)]="taskName"
+        name="taskName"
+      >
+      <label>Task Description</label>
+      <textarea
+        rows=10
+        [(ngModel)]="taskDescription"
+      ></textarea>
+
+      <button
+        type="button"
+        (click)="onClickAddTask()"
+      >Save Task</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+
+.IBM-font
+{
+    @include font('IBM Plex Serif');
+}
+
+.IBM-font-hero
+{
+    @include font('IBM Plex Serif');
+}
+
+.bebas-font
+{
+    @include font('Bebas Neue');
+}
+
+.font-monospace
+{
+    font-family: 'Space Mono', monospace;
+}
+
+.font-sans
+{
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}

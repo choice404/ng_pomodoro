@@ -1,0 +1,28 @@
+<div
+  *ngIf="isModal"
+  class="modal-wrapper"
+>
+  <app-task-modal
+    (emitCloseModal)="closeModal($event)"
+    (emitAddTask)="addNewTask($event)"
+  >
+  </app-task-modal>
+</div>
+<div
+  class="task-wrapper"
+>
+  <div
+    class="task-title"
+  >
+    <h1 class="bebas-font">Tasks</h1>
+  </div>
+  <app-new-task (newTaskEvent)="showModal($event)"></app-new-task>
+
+  <div
+    class="task-list"
+    *ngFor="let task of tasks"
+  >
+    <app-task-tab [task]="task"></app-task-tab>
+  </div>
+
+</div>

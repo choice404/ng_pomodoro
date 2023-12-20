@@ -1,0 +1,33 @@
+<div
+    class="text-wrapper"
+    [style.text-align]="dir"
+>
+    <div
+        *ngIf="isTitle"
+        class="title"
+        [style.font-family]="titleFont"
+        [style.font-size.rem]="titleSize"
+    >
+        <h1>{{ text }}</h1>
+    </div>
+    <div
+        *ngIf="isSubtitle"
+        class="subtitle"
+        [style.font-family]="subtitleFont"
+        [style.font-size.rem]="subtitleSize"
+    >
+        <h3>{{ text }}</h3>
+    </div>
+    <div
+        *ngIf="isText"
+        class="text"
+        [style.font-family]="textFont"
+    >
+        <div *ngFor="let line of lines">
+            <div
+                [innerHTML]="line"
+            ></div>
+            <br>
+        </div>
+    </div>
+</div>

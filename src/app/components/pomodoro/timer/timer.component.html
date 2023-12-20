@@ -1,0 +1,63 @@
+<div
+  class = "timer-wrapper"
+>
+  <div
+    class="button-wrapper"
+  >
+    <div
+      class="button"
+      (click)="selectPomodoro()"
+    >
+      <h4 class="bebas-font">Pomodoro</h4>
+    </div>
+    <div
+      class="button"
+      (click)="selectShortBreak()"
+    >
+      <h4 class="bebas-font">Short Break</h4>
+    </div>
+    <div
+      class="button"
+      (click)="selectLongBreak()"
+    >
+      <h4 class="bebas-font">Long Break</h4>
+    </div>
+  </div>
+
+  <div class="pomodoro-wrapper">
+    <div
+      class="timer"
+      [class.pomodoro]='timer == "pomodoro"'
+      [class.short-break]='timer == "shortBreak"'
+      [class.long-break]='timer == "longBreak"'
+    >
+      <h1
+        class="time bebas-font"
+      >
+        {{ minutesDisplay }}:{{ secondsDisplay }}
+      </h1>
+    </div>
+    <div
+      class="button-wrapper"
+    >
+      <div
+        class="button bebas-font"
+      >
+        <h1
+          (click)="handleTimer()"
+        >
+          {{ buttonLabel }}
+        </h1>
+      </div>
+      <div
+        class="button bebas-font"
+      >
+        <h1
+          (click)="resetTimer()"
+        >
+          Reset
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>

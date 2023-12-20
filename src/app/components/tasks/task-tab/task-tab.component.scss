@@ -1,0 +1,29 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_fonts.scss';
+
+.task-wrapper
+{
+  width: 100vw;
+
+  .task
+  {
+    background-color: $secondary;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 6rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: $tertiary;
+    transition: all 0.2s ease-in-out;
+
+    @media (max-width: 600px)
+    {
+      width: 20rem;
+      height: 6rem;
+    }
+  }
+}

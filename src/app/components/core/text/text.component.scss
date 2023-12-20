@@ -1,0 +1,37 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixins.scss';
+@import 'src/styles/_fonts.scss';
+
+h1
+{
+  color: white;
+}
+
+.text-wrapper
+{
+    color: $tertiary;
+
+    .text
+    {
+        color: $secondary;
+        ::ng-deep a
+        {
+            color: $tertiary;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:hover
+            {
+                color: $tertiary;
+            }
+            &:active
+            {
+                color: $tertiary;
+            }
+            &:visited
+            {
+                color: $tertiary;
+            }
+        }
+    }
+}
