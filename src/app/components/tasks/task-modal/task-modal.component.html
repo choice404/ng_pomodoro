@@ -11,16 +11,17 @@
         type="text"
         [(ngModel)]="taskName"
         name="taskName"
+        required
       >
       <label>Task Description</label>
       <textarea
-        rows=10
+        rows="5"
         [(ngModel)]="taskDescription"
       ></textarea>
 
       <button
         type="button"
-        (click)="onClickAddTask()"
+        onclick="onClickAddTask()"
       >Save Task</button>
     </form>
   </div>
