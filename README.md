@@ -65,6 +65,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ##   Version history
 v0.0.1 Initial Version
+
 v0.0.2 Fixing Timer
 
 ##   Todo
