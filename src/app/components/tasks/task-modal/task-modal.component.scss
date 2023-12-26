@@ -2,6 +2,14 @@
 @import 'src/styles/_mixins.scss';
 @import 'src/styles/_fonts.scss';
 
+.error-message
+{
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+}
+
 .modal-backdrop
 {
     display: flex;

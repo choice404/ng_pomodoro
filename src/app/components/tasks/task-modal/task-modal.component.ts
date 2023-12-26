@@ -7,27 +7,43 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class TaskModalComponent {
 
-    @Output() emitCloseModal = new EventEmitter<boolean>
-    @Output() emitAddTask = new EventEmitter<any>();
+  @Output() emitCloseModal = new EventEmitter<boolean>
+  @Output() emitAddTask = new EventEmitter<any>();
 
-    taskName: string = "";
-    taskDescription: string = "";
+  taskName: string = "";
+  taskDescription: string = "";
+  pomodoroEstimate: number = 1;
+  error: boolean = false;
+  errorMessage: string = "";
 
-    onClickExitModal(event: MouseEvent)
+  onClickExitModal(event: MouseEvent)
+  {
+    if(event.target === event.currentTarget)
     {
-        if(event.target === event.currentTarget)
-        {
-            this.emitCloseModal.emit(false);
-        }
-    }
-
-    onClickAddTask()
-    {
-        this.emitAddTask.emit({
-            "name": this.taskName,
-            "description": this.taskDescription,
-        });
         this.emitCloseModal.emit(false);
     }
+  }
+
+  onClickAddTask()
+  {
+    if(this.taskName === "")
+    {
+      this.logError("Please enter a task name");
+      return;
+    }
+    this.emitAddTask.emit({
+        "name": this.taskName,
+        "description": this.taskDescription,
+        "pomodoroEstimate": this.pomodoroEstimate,
+    });
+    this.emitCloseModal.emit(false);
+  }
+
+  logError(message: string)
+  {
+    console.log(message);
+    this.errorMessage = message;
+    this.error = true;
+  }
 
 }

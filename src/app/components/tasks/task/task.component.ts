@@ -26,6 +26,8 @@ export class TaskComponent {
     this.tasks.push({
       "name": task.name,
       "description": task.description,
+      "isCompleted": false,
+      "pomodoroEstimate": task.pomodoroEstimate,
     });
   }
 }

@@ -19,10 +19,14 @@
   <app-new-task (newTaskEvent)="showModal($event)"></app-new-task>
 
   <div
-    class="task-list"
-    *ngFor="let task of tasks"
+    class="task-list-wrapper"
   >
-    <app-task-tab [task]="task"></app-task-tab>
+    <div
+      class="task-list"
+      *ngFor="let task of tasks"
+    >
+      <app-task-tab [task]="task"></app-task-tab>
+    </div>
   </div>
 
 </div>

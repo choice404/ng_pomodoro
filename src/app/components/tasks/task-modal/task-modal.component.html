@@ -6,6 +6,12 @@
     class="modal"
   >
     <form>
+      <div
+        *ngIf="error"
+        class="error-message"
+      >
+        <p>{{ errorMessage }}</p>
+      </div>
       <label>Task Name</label>
       <input
         type="text"
@@ -19,9 +25,18 @@
         [(ngModel)]="taskDescription"
       ></textarea>
 
+      <label>Extimated Pomodoros</label>
+      <input
+        type="number"
+        [(ngModel)]="pomodoroEstimate"
+        name="pomodoroEstimate"
+        min="1"
+        required
+      >
+
       <button
         type="button"
-        onclick="onClickAddTask()"
+        (click)="onClickAddTask()"
       >Save Task</button>
     </form>
   </div>
