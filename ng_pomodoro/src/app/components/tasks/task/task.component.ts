@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Task } from '../../../interfaces/task'
+import { TaskService } from '../../../services/task.service'
 
 @Component({
   selector: 'app-task',
@@ -8,26 +11,25 @@ import { Component } from '@angular/core';
 export class TaskComponent {
   isModal = false;
 
-  tasks: any[] = [
-  ]
+  @Input() completeTasks: Task[] = [];
+  @Input() incompleteTasks: Task[] = [];
+  @Input() old_tasks: any[] = []
+  @Input() old_tasks_done: any[] = []
 
-  showModal(modal: boolean)
+  @Output() emitAddTask = new EventEmitter<any>();
+
+  showModal(modal: boolean): void
   {
     this.isModal = modal;
   }
 
-  closeModal(modal: boolean)
+  closeModal(modal: boolean): void
   {
     this.isModal = modal;
   }
 
-  addNewTask(task: any)
+  addNewTask(task: any): void
   {
-    this.tasks.push({
-      "name": task.name,
-      "description": task.description,
-      "isCompleted": false,
-      "pomodoroEstimate": task.pomodoroEstimate,
-    });
+    this.emitAddTask.emit(task);
   }
 }

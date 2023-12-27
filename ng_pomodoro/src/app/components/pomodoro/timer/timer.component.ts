@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-timer',
@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./timer.component.scss']
 })
 export class TimerComponent {
+  @Output() emitPomodoroComplete = new EventEmitter<void>();
+
   minutes: number = 0;
   seconds: number = 0;
   minutesDisplay: string = "25";
@@ -142,7 +144,7 @@ export class TimerComponent {
         if(this.timer === "pomodoro")
         {
           this.pomodoroCount++;
-          // this.emitPomodoroo.emit()
+          this.emitPomodoroComplete.emit();
           if(this.pomodoroCount === 4)
           {
             this.pomodoroCount = 0;
@@ -165,5 +167,10 @@ export class TimerComponent {
       }
     }
     this.interval = setInterval(timer, 1000);
+  }
+
+  testClick(): void
+  {
+    this.emitPomodoroComplete.emit();
   }
 }

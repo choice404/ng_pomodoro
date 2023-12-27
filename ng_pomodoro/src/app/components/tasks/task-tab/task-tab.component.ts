@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Task } from '../../../interfaces/task'
 
 @Component({
   selector: 'app-task-tab',
@@ -6,28 +7,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./task-tab.component.scss']
 })
 export class TaskTabComponent {
-  @Input() task = {
+  @Input() task: Task = {
     "name": "",
     "description": "",
-    "isCompleted": false,
+    "isComplete": false,
+    "pomodoroCount": 0,
     "pomodoroEstimate": 1,
+    "_id": "",
   };
-
-  @Input() pomodoroCount = 0;
-  // @Input() pomodorosRequired = 1;
-
-  ngOnChanges()
-  {
-  }
-
-  onClickTask()
-  {
-    this.pomodoroCount++;
-    if(this.pomodoroCount >= this.task.pomodoroEstimate)
-    {
-      this.pomodoroCount = this.task.pomodoroEstimate;
-      this.task.isCompleted = true;
-    }
-  }
-
 }

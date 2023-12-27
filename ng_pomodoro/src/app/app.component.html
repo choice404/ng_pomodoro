@@ -3,10 +3,19 @@
 >
 </div>
 <div class="timer-wrapper">
-  <app-timer></app-timer>
+  <app-timer
+    (emitPomodoroComplete)="increaseOldActivePomodoroCount()"
+  ></app-timer>
 </div>
 <div class="task-wrapper">
-  <app-task></app-task>
+  <app-task
+    [old_tasks]="old_tasks"
+    [old_tasks_done]="old_tasks_done"
+    [completeTasks]="completeTasks"
+    [incompleteTasks]="incompleteTasks"
+    (emitAddTask)="addNewTask($event)"
+  ></app-task>
 </div>
 
+<!-- No router needed... now -->
 <!-- <router-outlet></router-outlet> -->

@@ -6,6 +6,15 @@
 {
   padding-top: 10rem;
 
+  .timer-title
+  {
+    color: $tertiary;
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
+    width: auto;
+  }
+
   .button-wrapper
   {
     display: flex;

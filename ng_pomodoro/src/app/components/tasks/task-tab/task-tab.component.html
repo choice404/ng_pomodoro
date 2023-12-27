@@ -6,11 +6,10 @@
   >
     <h1 class="bebas-font">{{ task.name }}</h1>
     <div
-      [class.completed-task]="task.isCompleted"
-      [class.in-progress]="!task.isCompleted"
-      (click)="onClickTask()"
+      [class.completed-task]="task.isComplete"
+      [class.in-progress]="!task.isComplete"
     >
-      <p>{{ pomodoroCount }}/<span>{{ task.pomodoroEstimate }}</span></p>
+      <p>{{ task.pomodoroCount }}/<span>{{ task.pomodoroEstimate }}</span></p>
     </div>
   </div>
 </div>

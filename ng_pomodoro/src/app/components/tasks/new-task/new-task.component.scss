@@ -8,17 +8,20 @@
 
   .new-task
   {
-    background-color: $secondary;
+    background-color: #2196f3;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35rem;
-    height: 6rem;
+    width: 10rem;
+    height: 2rem;
     border-radius: 10px;
     font-size: 3rem;
     color: $tertiary;
     transition: all 0.2s ease-in-out;
+    font-size: .5rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
 
     @media (max-width: 600px)
     {
@@ -33,7 +36,7 @@
   }
   .new-task:hover
   {
-    background-color: $primary;
+    background-color: #1976d2;
     cursor: pointer;
 
     .icon
