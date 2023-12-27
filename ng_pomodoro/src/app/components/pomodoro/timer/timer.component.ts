@@ -168,9 +168,4 @@ export class TimerComponent {
     }
     this.interval = setInterval(timer, 1000);
   }
-
-  testClick(): void
-  {
-    this.emitPomodoroComplete.emit();
-  }
 }
