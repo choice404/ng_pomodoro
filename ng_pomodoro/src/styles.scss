@@ -3,10 +3,6 @@
 @import 'src/styles/_mixins.scss';
 @import 'src/styles/_fonts.scss';
 
-
-// $light-theme:;
-// $dark-theme:;
-
 *
 {
     margin: 0;
@@ -40,7 +36,8 @@ $scrollbar-track-color: rgba(245, 245, 245, 0.0);
 
 body
 {
+    margin: 0;
+    padding: 0;
     scrollbar-width: thin;
     scrollbar-color: $scrollbar-thumb-color $scrollbar-track-color;
-    background-image: linear-gradient(-20deg, #025159 0%, #733b36 100%);
 }

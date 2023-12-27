@@ -2,18 +2,20 @@
 @import 'src/styles/_mixins.scss';
 @import 'src/styles/_fonts.scss';
 
+.zen-off
+{
+  color: $secondary;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.zen-on
+{
+  color: rgba($zen-secondary, .3);
+  transition: all 0.5s ease-in-out;
+}
+
 .timer-wrapper
 {
-  padding-top: 10rem;
-
-  .timer-title
-  {
-    color: $tertiary;
-    font-size: 3rem;
-    text-align: center;
-    margin: auto;
-    width: auto;
-  }
 
   .button-wrapper
   {
@@ -45,7 +47,7 @@
 
   .pomodoro-wrapper
   {
-    width: 100vw;
+    width: calc(100vw - 12px);
 
     .timer
     {
@@ -56,8 +58,7 @@
       height: 15rem;
       border-radius: 10px;
       font-size: 5rem;
-      // color: darken($secondary, 75%);
-      color: $secondary;
+      margin:auto;
 
       @media (max-width: 600px)
       {
@@ -68,21 +69,17 @@
 
     .pomodoro
     {
-      margin:auto;
-      background-color: $primary;
+      background-color: rgba($primary, 0.20);
     }
 
     .short-break
     {
-      margin:auto;
-      background-color: $short-break;
+      background-color: rgba($short-break, 0.20);
     }
 
     .long-break
     {
-      margin:auto;
-      background-color: $long-break;
+      background-color: rgba($long-break, 0.20);
     }
-
   }
 }

@@ -8,10 +8,9 @@
   z-index: 100;
 }
 
-
 .task-wrapper
 {
-  width: 100vw;
+  width: calc(100vw - 12px);
   margin: 7rem 0;
 
   .task-list-wrapper

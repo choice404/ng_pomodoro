@@ -2,13 +2,6 @@
   class = "timer-wrapper"
 >
   <div
-    class="timer-title"
-  >
-    <h1
-      class="bebas-font"
-    >PomoFocus</h1>
-  </div>
-  <div
     class="button-wrapper"
   >
     <div
@@ -32,11 +25,14 @@
   </div>
 
   <div class="pomodoro-wrapper">
+
     <div
       class="timer"
-      [class.pomodoro]='timer == "pomodoro"'
-      [class.short-break]='timer == "shortBreak"'
-      [class.long-break]='timer == "longBreak"'
+      [class.pomodoro]='timer == "pomodoro" && !isZenMode'
+      [class.short-break]='timer == "shortBreak" && !isZenMode'
+      [class.long-break]='timer == "longBreak" && !isZenMode'
+      [class.zen-on]="isZenMode"
+      [class.zen-off]="!isZenMode"
     >
       <h1
         class="time bebas-font"

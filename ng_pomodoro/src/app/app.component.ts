@@ -11,6 +11,7 @@ import { TaskService } from './services/task.service'
 export class AppComponent {
   completeTasks: Task[] = [];
   incompleteTasks: Task[] = [];
+  isZenMode: boolean = false;
 
   title = 'ng_pomodoro';
 
@@ -27,6 +28,11 @@ export class AppComponent {
   ngOnInit(): void
   {
     this.fetchTasks();
+  }
+
+  toggleZenMode(): void
+  {
+    this.isZenMode = !this.isZenMode;
   }
 
   addNewTask(task: any): void

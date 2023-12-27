@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-timer',
@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class TimerComponent {
   @Output() emitPomodoroComplete = new EventEmitter<void>();
+  @Input() isZenMode: boolean = false;
 
   minutes: number = 0;
   seconds: number = 0;
@@ -149,20 +150,18 @@ export class TimerComponent {
           {
             this.pomodoroCount = 0;
             this.selectLongBreak();
+            this.startTimer();
           }
           else
           {
             this.selectShortBreak();
+            this.startTimer();
           }
         }
-        else if(this.timer === "shortBreak")
+        else if(this.timer === "shortBreak" || this.timer === "longBreak")
         {
           this.selectPomodoro();
-        }
-        else if(this.timer === "longBreak")
-        {
-          this.selectPomodoro();
-          this.pomodoroCount = 0;
+          this.startTimer();
         }
       }
     }

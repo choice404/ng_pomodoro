@@ -1,6 +1,6 @@
 # Pomodoro
 
-Version 0.0.3
+Version 0.0.4
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
@@ -22,11 +22,9 @@ A Pomodoro web app created by Austin Choi for the Codédex JavaScript course fin
 
 ### Version information
 
-#### 0.0.3
+#### 0.0.4
 
-In this version I changed how tasks are displayed to make it look cleaner. Now there is a counter for how many pomodoros have passed for the current active task (The task at the top of the list). This will soon be updated so a user can set which task they want to be at the top of the list. 
-
-I have also made a basic Express.js API that connects to a MongoDB Atlas server however it is not deployed yet. I will be adding user authentication before doing so that way users can have their own list of tasks.
+In this version I updated the UI to make it look a little more cleaner. I lowered the opacity of the div surrounding the timer and added in a zen mode with an ultra-minimalist aesthetic to allow the user to relax while using the application.
 
 Please refer to [todo](#todo) for a list of current issues I will be taking care of
 
@@ -81,6 +79,8 @@ v0.0.1 Initial Version
 v0.0.2 Fixing Timer
 
 v0.0.3 Task Update
+
+v0.0.4 Zen Mode
 
 ##   Todo
 - Add more features to the tasks such as:
